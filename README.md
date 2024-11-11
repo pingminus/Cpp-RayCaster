@@ -1,4 +1,4 @@
-# Cpp-RayCaster
+# C++-RayCaster
 
 This is a simple **3D raycasting game** implemented in **C++** that runs in the Windows console. The player navigates a map by casting rays, with movement controlled by the keyboard.
 
