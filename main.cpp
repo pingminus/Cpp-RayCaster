@@ -73,6 +73,7 @@ int main() {
         // Player movement controls (W, A, S, D)
         if (GetAsyncKeyState((unsigned short)'A') & 0x8000) {
             PlayerAngle -= (1.0f) * ElapsedTime; // Turn left
+            
         }
         if (GetAsyncKeyState((unsigned short)'D') & 0x8000) {
             PlayerAngle += (1.0f) * ElapsedTime; // Turn right
@@ -80,10 +81,20 @@ int main() {
         if (GetAsyncKeyState((unsigned short)'W') & 0x8000) {
             PlayerX += cosf(PlayerAngle) * 5.0f * ElapsedTime; // Move forward
             PlayerY += sinf(PlayerAngle) * 5.0f * ElapsedTime; // Move forward
+        
+            if (mapMatrix[(int)PlayerY][(int)PlayerX] == '#') {
+                PlayerX -= cosf(PlayerAngle) * 5.0f * ElapsedTime; // Move forward
+                PlayerY -= sinf(PlayerAngle) * 5.0f * ElapsedTime; // Move forward
+            }
         }
         if (GetAsyncKeyState((unsigned short)'S') & 0x8000) {
             PlayerX -= cosf(PlayerAngle) * 5.0f * ElapsedTime; // Move backward
             PlayerY -= sinf(PlayerAngle) * 5.0f * ElapsedTime; // Move backward
+
+            if (mapMatrix[(int)PlayerY][(int)PlayerX] == '#') {
+                PlayerX += cosf(PlayerAngle) * 5.0f * ElapsedTime; // Move forward
+                PlayerY += sinf(PlayerAngle) * 5.0f * ElapsedTime; // Move forward
+            }
         }
 
         // Raycasting for each column of the screen
