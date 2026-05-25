@@ -14,15 +14,12 @@ This is a simple **3D raycasting game** implemented in **C++** that runs in the 
 ## Prerequisites
 
 To run this project, you will need:
-
-- **Windows Operating System** (since it uses the Windows API to interact with the console)
-- **No additional setup required** if using the provided `.exe` file
+Windows
 
 ## How to Run
+ g++ main.cpp -o main
+ ./main
 
-1. **Run the Game**  
-   If you just want to play, you can directly run the `3D Engine.exe` file:
-   - Double-click `3D Engine.exe` to start the game.
 
 ##  Troubleshooting
   If your window looks like this: ![image](https://github.com/user-attachments/assets/e9174eae-fc9c-4bf4-b74f-c41a805cd9be)
