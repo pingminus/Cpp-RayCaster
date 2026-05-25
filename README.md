@@ -16,9 +16,6 @@ This is a simple **3D raycasting game** implemented in **C++** that runs in the 
 To run this project, you will need:
 Windows
 
-## How to Run
- g++ main.cpp -o main
- ./main
 
 
 ##  Troubleshooting
